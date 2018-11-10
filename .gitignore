@@ -3,3 +3,8 @@
 
 #Ignore all vscode stuff
 *.vscode/
+
+#Ignore object files
+*.o
+*.P
+*.x
