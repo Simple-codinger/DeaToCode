@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  
+//
 //
 //  Created by Vincent Gierisch on 09.11.18.
 //
@@ -10,7 +10,7 @@
 //#include <nlohmann/json.hpp>
 
 
-int main(){    
+int main(){
     Application app("jsonExample.json");
     app.run();
 }

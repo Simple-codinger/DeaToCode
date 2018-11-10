@@ -11,14 +11,17 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
 #include "mapper/JsonToDfa.hpp"
+
+using namespace std;
 
 class Application{
 private:
-    std::string _pathToJson;
+    string _pathToJson;
     void printWelcomeText();
 public:
-    Application(std::string path);
+    Application(string path);
     void run();
 };
 #endif /* app_hpp */

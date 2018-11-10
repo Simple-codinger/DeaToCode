@@ -8,8 +8,6 @@
 #include "app.hpp"
 #include "mapper/JsonToDfa.hpp"
 
-using namespace std;
-
 Application::Application(string path){
     this->_pathToJson = path;
 }
@@ -23,5 +21,3 @@ void Application::run(){
 void Application::printWelcomeText(){
         std::cout << "To convert an DFA to valid code, please insert the dfa.json file in the same directory as this program. \n A json example can also be found there" << std::endl;
 }
-
-

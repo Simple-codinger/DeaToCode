@@ -1,8 +1,20 @@
-EXTRACFLAGS =
-EXTRA_LIBS =
-MODULE = run
-SRCS = $(wildcard *.cpp)
+# Declaration of variables
+CC = g++
+CC_FLAGS = -w
 
-OBJS = $(SRCS:.cpp=.o)
+# File names
+EXEC = run
+SOURCES = $(wildcard *.cpp)
+OBJECTS = $(SOURCES:.cpp=.o)
 
-include Makefile.defs
+# Main target
+$(EXEC): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(EXEC)
+
+# To obtain object files
+%.o: %.cpp
+	$(CC) -c $(CC_FLAGS) $< -o $@
+
+# To remove generated files
+clean:
+	rm -f $(EXEC) $(OBJECTS)
