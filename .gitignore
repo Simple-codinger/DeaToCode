@@ -7,4 +7,4 @@
 #Ignore object files
 *.o
 *.P
-*.x
+*run
