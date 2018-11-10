@@ -1,0 +1,5 @@
+#Ignore all xcodeproj stuff
+*.xcodeproj/
+
+#Ignore all vscode stuff
+*.vscode/
