@@ -4,7 +4,10 @@ CC_FLAGS = -w
 
 # File names
 EXEC = run
-SOURCES = $(wildcard *.cpp)
+SOURCES = $(wildcard *.cpp) \
+					$(wildcard app/*.cpp) \
+					$(wildcard app/mapper/*.cpp) \
+					$(wildcard app/models/*.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 
 # Main target
