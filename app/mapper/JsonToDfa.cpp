@@ -15,5 +15,5 @@ JsonToDfa::JsonToDfa(string path){
 }
 
 void JsonToDfa::generateDfa(){
-    return NULL;
+
 }

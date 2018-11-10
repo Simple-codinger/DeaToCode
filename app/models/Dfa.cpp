@@ -1,12 +1,12 @@
 //
 //  Dfa.cpp
-//  
+//
 //
 //  Created by Vincent Gierisch on 09.11.18.
 //
 
 #include "Dfa.hpp"
-Dfa::Dfa(list<State> states, list<strings> alphabet, list<DeltaFunctions> deltaFunctions, State startState, list<State> endStates){
+Dfa::Dfa(list<State> states, list<string> alphabet, list<DeltaFunction> deltaFunctions, State startState, list<State> endStates){
     this->_states = states;
     this->_alphabet = alphabet;
     this->_deltaFunctions = deltaFunctions;
@@ -35,7 +35,7 @@ void Dfa::addEndState(State endState){
 }
 
 void Dfa::compress(){
-    
+
 }
 
 bool Dfa::isValid(){

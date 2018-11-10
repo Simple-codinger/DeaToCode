@@ -6,7 +6,6 @@
 //  Copyright © 2018 Vincent Gierisch. All rights reserved.
 //
 #include "app.hpp"
-#include "mapper/JsonToDfa.hpp"
 
 Application::Application(string path){
     this->_pathToJson = path;

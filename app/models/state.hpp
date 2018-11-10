@@ -11,15 +11,16 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class State{
     private:
         string _name;
-    
+
     public:
-        State(string name);
         string getName();
+        void setName(string name);
 };
 #endif /* state_hpp */

@@ -8,15 +8,15 @@
 
 #include "DeltaFunction.hpp"
 
-DeltaFunction::DeltaFunction(State state, list<Delta> deltas){
-    this->_state = state;
+DeltaFunction::DeltaFunction(State* state, list<Delta> deltas){
+    this->_startState = state;
     this->_deltas = deltas;
 }
 
 State DeltaFunction::getSate(){
-    return this->state;
+    return *(this->_startState);
 }
 
-list<Delta> getDeltas(){
+list<Delta> DeltaFunction::getDeltas(){
     return this->_deltas;
 }

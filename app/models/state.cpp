@@ -8,10 +8,10 @@
 
 #include "state.hpp"
 
-State::State(string name){
-    this->_name = name;
-}
-
 string State::getName(){
     return this->_name;
+}
+
+void State::setName(string name){
+  this->_name = name;
 }

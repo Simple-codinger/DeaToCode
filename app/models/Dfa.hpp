@@ -1,6 +1,6 @@
 //
 //  Dfa.hpp
-//  
+//
 //
 //  Created by Vincent Gierisch on 09.11.18.
 //
@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
 #include <list>
 #include "state.hpp"
 #include "DeltaFunction.hpp"
@@ -23,7 +24,7 @@ class Dfa{
         list<DeltaFunction> _deltaFunctions;
         State _startState;
         list<State> _endStates;
-    
+
     public:
         Dfa(list<State> states, list<string> alphabet, list<DeltaFunction> deltaFunctions, State startState, list<State> endStates);
         void addState(State state);
