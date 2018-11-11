@@ -48,7 +48,8 @@ list<string> JsonToDfa::generateAlphabet(json j){
 
 list<DeltaFunction> JsonToDfa::generateDeltaFunctions(json j){
   list<DeltaFunction> deltaFunctions;
-  auto v1 = j.at("d")[0];
-  cout << v1;
+  for (json::iterator it = j.at("d").begin(); it != j.at("d").end(); ++it) {
+    cout << (*it)["startState"];
+  }
   return deltaFunctions;
 }
