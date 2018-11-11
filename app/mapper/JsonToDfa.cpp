@@ -7,13 +7,16 @@
 //
 
 #include "JsonToDfa.hpp"
-#include <iostream>
-//#include "Dfa.hpp"
 
 JsonToDfa::JsonToDfa(string path){
-    _path = path;
+    this->_path = path;
 }
 
 void JsonToDfa::generateDfa(){
+  //read the json-File
+  ifstream i(this->_path);
+  json j;
+  i >> j;
 
+  cout << j.at("q0");
 }

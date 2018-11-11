@@ -11,6 +11,7 @@
 
 
 int main(){
+    //TODO add mappers object to constructor, it should indicate to which code it should transfer
     Application app("jsonExample.json");
     app.run();
 }

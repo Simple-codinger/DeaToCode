@@ -14,7 +14,7 @@ Application::Application(string path){
 void Application::run(){
     this->printWelcomeText();
     JsonToDfa jsonMapper(this->_pathToJson);
-    //jsonMapper.generateDfa();
+    jsonMapper.generateDfa();
 }
 
 void Application::printWelcomeText(){

@@ -11,14 +11,17 @@
 
 #include <stdio.h>
 #include <iostream>
-//#include "../models/Dfa.hpp"
+#include <fstream>
+#include "../../nlohmann/json.hpp"
+#include "../models/Dfa.hpp"
 
 using namespace std;
+using json = nlohmann::json;
 
 class JsonToDfa{
     private:
         string _path;
-    
+
     public:
         JsonToDfa(string path);
         void generateDfa();
