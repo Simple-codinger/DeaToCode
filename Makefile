@@ -1,6 +1,6 @@
 # Declaration of variables
 CC = g++
-CC_FLAGS = -w
+CC_FLAGS = -w -g
 
 # File names
 EXEC = run

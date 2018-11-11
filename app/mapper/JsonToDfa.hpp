@@ -12,6 +12,9 @@
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
+#include <list>
+#include "../models/state.hpp"
+#include "../models/DeltaFunction.hpp"
 #include "../../nlohmann/json.hpp"
 #include "../models/Dfa.hpp"
 
@@ -21,6 +24,10 @@ using json = nlohmann::json;
 class JsonToDfa{
     private:
         string _path;
+        list<State> generateStates(json j);
+        list<string> generateAlphabet(json j);
+        list<DeltaFunction> generateDeltaFunctions(json j);
+
 
     public:
         JsonToDfa(string path);

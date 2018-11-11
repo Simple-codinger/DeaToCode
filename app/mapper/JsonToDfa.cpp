@@ -14,9 +14,41 @@ JsonToDfa::JsonToDfa(string path){
 
 void JsonToDfa::generateDfa(){
   //read the json-File
-  ifstream i(this->_path);
+  ifstream fileStream(this->_path);
   json j;
-  i >> j;
+  try{
+    fileStream >> j;
+  }catch(...){
+    cout << "Error: Parsing file" ;
+  }
 
-  cout << j.at("q0");
+  list<State> states = this->generateStates(j);
+  list<string> strings = this->generateAlphabet(j);
+  list<DeltaFunction> deltaFunctions = this->generateDeltaFunctions(j);
+}
+
+list<State> JsonToDfa::generateStates(json j){
+  list<State> states;
+  for (json::iterator it = j.at("Q").begin(); it != j.at("Q").end(); ++it) {
+    string s = (*it);
+    State state;
+    state.setName(s);
+    states.push_back(state);
+  }
+  return states;
+}
+
+list<string> JsonToDfa::generateAlphabet(json j){
+  list<string> strings;
+  for (json::iterator it = j.at("E").begin(); it != j.at("E").end(); ++it) {
+    strings.push_back((*it));
+  }
+  return strings;
+}
+
+list<DeltaFunction> JsonToDfa::generateDeltaFunctions(json j){
+  list<DeltaFunction> deltaFunctions;
+  auto v1 = j.at("d")[0];
+  cout << v1;
+  return deltaFunctions;
 }

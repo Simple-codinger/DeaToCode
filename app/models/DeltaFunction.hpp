@@ -17,17 +17,17 @@
 using namespace std;
 
 struct Delta{
-    string* alphabetLetter;
-    State* endState;
+    string alphabetLetter;
+    State endState;
 };
 
 class DeltaFunction{
     private:
-        State* _startState;
+        State _startState;
         list<Delta> _deltas;
         unsigned int _deltasCount;
     public:
-        DeltaFunction(State* state, list<Delta> deltas);
+        DeltaFunction(State state, list<Delta> deltas);
         State getSate();
         list<Delta> getDeltas();
 };
