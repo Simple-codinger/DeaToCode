@@ -7,14 +7,17 @@
 //
 #include "app.hpp"
 
-Application::Application(string path){
-    this->_pathToJson = path;
+Application::Application(string jsonPath, string codePath, DfaToNxc codeGenerator){
+    this->_pathToJson = jsonPath;
+    this->_pathToCode = codePath;
+    this->_codeGenerator = codeGenerator;
 }
 
 void Application::run(){
     this->printWelcomeText();
     JsonToDfa jsonMapper(this->_pathToJson);
-    jsonMapper.generateDfa();
+    Dfa dfa = jsonMapper.generateDfa();
+    this->_codeGenerator.generate(this->_pathToCode, dfa);
 }
 
 void Application::printWelcomeText(){

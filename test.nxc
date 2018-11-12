@@ -1,0 +1,33 @@
+//DO NOT LOOK BEHIND THE CURTAIN!!!
+//ABSOLUTELY PERFECT!
+
+#define q1 0
+#define q2 1
+#define q3 2
+#define q4 3
+
+
+task dfa(){
+
+int state = q1;
+while(1){
+switch(state){
+case q1:
+if(eventIsPresent(a)){
+state = q2
+}
+if(eventIsPresent(b)){
+state = q1
+}
+break;
+case q2:
+if(eventIsPresent(a)){
+state = q2
+}
+if(eventIsPresent(b)){
+state = q3
+}
+break;
+}
+}
+}

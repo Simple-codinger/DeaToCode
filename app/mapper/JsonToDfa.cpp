@@ -23,13 +23,14 @@ Dfa JsonToDfa::generateDfa(){
   }
 
   list<State> states = this->generateStates(j);
-  list<string> strings = this->generateAlphabet(j);
+  list<string> alphabet = this->generateAlphabet(j);
   list<DeltaFunction> deltaFunctions = this->generateDeltaFunctions(j);
   State startState;
   startState.setName(j["q0"]);
   list<State> endStates =this->generateEndStates(j);
 
-
+  Dfa dfa(states, alphabet, deltaFunctions, startState, endStates);
+  return dfa;
 }
 
 list<State> JsonToDfa::generateStates(json j){

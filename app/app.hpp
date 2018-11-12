@@ -13,15 +13,19 @@
 #include <iostream>
 #include <string>
 #include "mapper/JsonToDfa.hpp"
+#include "mapper/DfaToNxc.hpp"
 
 using namespace std;
 
 class Application{
 private:
     string _pathToJson;
+    string _pathToCode;
+    DfaToNxc _codeGenerator;
     void printWelcomeText();
+
 public:
-    Application(string path);
+    Application(string jsonPath, string codePath, DfaToNxc codeGenerator);
     void run();
 };
 #endif /* app_hpp */

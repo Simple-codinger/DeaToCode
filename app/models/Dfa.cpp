@@ -14,6 +14,24 @@ Dfa::Dfa(list<State> states, list<string> alphabet, list<DeltaFunction> deltaFun
     this->_endStates = endStates;
 }
 
+//region getter
+list<State> Dfa::getStates(){
+  return this->_states;
+}
+list<string> Dfa::getAlphabet(){
+  return this->_alphabet;
+}
+list<DeltaFunction> Dfa::getDeltaFunctions(){
+  return this->_deltaFunctions;
+}
+State Dfa::getStartState(){
+  return this->_startState;
+}
+list<State> Dfa::getEndStates(){
+  return this->_endStates;
+}
+//endregion
+
 void Dfa::addState(State state){
     this->_states.push_back(state);
 }

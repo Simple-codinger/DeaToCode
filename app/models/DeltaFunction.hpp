@@ -28,7 +28,7 @@ class DeltaFunction{
         unsigned int _deltasCount;
     public:
         DeltaFunction(State state, list<Delta> deltas);
-        State getSate();
+        State getState();
         list<Delta> getDeltas();
 };
 

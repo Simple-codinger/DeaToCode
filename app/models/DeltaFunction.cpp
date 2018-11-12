@@ -13,7 +13,7 @@ DeltaFunction::DeltaFunction(State state, list<Delta> deltas){
     this->_deltas = deltas;
 }
 
-State DeltaFunction::getSate(){
+State DeltaFunction::getState(){
     return this->_startState;
 }
 

@@ -27,6 +27,13 @@ class Dfa{
 
     public:
         Dfa(list<State> states, list<string> alphabet, list<DeltaFunction> deltaFunctions, State startState, list<State> endStates);
+        //region getter
+        list<State> getStates();
+        list<string> getAlphabet();
+        list<DeltaFunction> getDeltaFunctions();
+        State getStartState();
+        list<State> getEndStates();
+        //endregion
         void addState(State state);
         void addAlphabetLetter(string alphabetLetter);
         void addDeltaFunction(DeltaFunction deltaFunction);
