@@ -27,11 +27,12 @@ class JsonToDfa{
         list<State> generateStates(json j);
         list<string> generateAlphabet(json j);
         list<DeltaFunction> generateDeltaFunctions(json j);
+        list<State> generateEndStates(json j);
 
 
     public:
         JsonToDfa(string path);
-        void generateDfa();
+        Dfa generateDfa();
         //bool isValidJson();
 };
 #endif /* JsonToDfa_hpp */
