@@ -9,7 +9,7 @@
 
 void DfaToNxc::generate(string path, Dfa dfa){
   string nxc = "//DO NOT LOOK BEHIND THE CURTAIN!!!\n";
-  nxc.append("//ABSOLUTELY PERFECT! \n\n");
+  nxc.append("//IT IS ABSOLUTELY PERFECT! \n\n");
 
   //define states
   int stateNumber = 0;
