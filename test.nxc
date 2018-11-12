@@ -1,5 +1,5 @@
 //DO NOT LOOK BEHIND THE CURTAIN!!!
-//ABSOLUTELY PERFECT!
+//ABSOLUTELY PERFECT! 
 
 #define q1 0
 #define q2 1
@@ -14,18 +14,18 @@ while(1){
 switch(state){
 case q1:
 if(eventIsPresent(a)){
-state = q2
+state = q2;
 }
 if(eventIsPresent(b)){
-state = q1
+state = q1;
 }
 break;
 case q2:
 if(eventIsPresent(a)){
-state = q2
+state = q2;
 }
 if(eventIsPresent(b)){
-state = q3
+state = q3;
 }
 break;
 }

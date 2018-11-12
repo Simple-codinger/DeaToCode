@@ -40,7 +40,7 @@ void DfaToNxc::generate(string path, Dfa dfa){
     nxc.append(caseStream.str());
     for(Delta delta : deltaFunction.getDeltas()){
       stringstream deltaStream;
-      deltaStream << "if(eventIsPresent(" << delta.alphabetLetter << ")){\nstate = " << delta.endState.getName() << "\n}" << endl;
+      deltaStream << "if(eventIsPresent(" << delta.alphabetLetter << ")){\nstate = " << delta.endState.getName() << ";\n}" << endl;
       nxc.append(deltaStream.str());
     }
     nxc.append("break;\n");
