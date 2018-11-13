@@ -1,16 +1,16 @@
 {
     "Q":["QM_START", "QM_L", "QM_R", "Q1R_R", "Q2R_R", "Q3R_R", "Q1R_L", "Q2R_L", "Q1L_L", "Q2L_L", "Q3L_L", "Q1L_R", "Q2L_R"],
-    "E":["LS", "RS", "T5"],
+    "E":["EVENT_LS", "EVENT_RS", "EVENT_T5"],
     "d":[
       {
         "startState":"QM_START",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q1R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q1L_L"
         }]
       },
@@ -18,15 +18,15 @@
         "startState":"Q1R_R",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q2R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "QM_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -34,15 +34,15 @@
         "startState":"Q2R_R",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q3R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q1R_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -50,11 +50,11 @@
         "startState":"Q3R_R",
         "deltaFunction":[
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q2R_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -62,15 +62,15 @@
         "startState":"Q1R_L",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q2R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "QM_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -78,15 +78,15 @@
         "startState":"Q2R_L",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q3R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q1R_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -94,15 +94,15 @@
         "startState":"QM_L",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q1R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q1L_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -110,15 +110,15 @@
         "startState":"Q1L_L",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "QM_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q2L_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -126,15 +126,15 @@
         "startState":"Q2L_L",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q1L_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q3L_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -142,11 +142,11 @@
         "startState":"Q3L_L",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q2L_R"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -154,15 +154,15 @@
         "startState":"Q1L_R",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "QM_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q2L_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -170,15 +170,15 @@
         "startState":"Q2L_R",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q1L_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q3L_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       },
@@ -186,15 +186,15 @@
         "startState":"QM_R",
         "deltaFunction":[
         {
-          "letter": "RS",
+          "letter": "EVENT_RS",
           "endState": "Q1R_R"
         },
         {
-          "letter": "LS",
+          "letter": "EVENT_LS",
           "endState": "Q1L_L"
         },
         {
-          "letter": "T5",
+          "letter": "EVENT_T5",
           "endState": "QM_START"
         }]
       }
