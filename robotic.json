@@ -1,0 +1,204 @@
+{
+    "Q":["M_START", "M_L", "M_R", "1R_R", "2R_R", "3R_R", "1R_L", "2R_L", "1L_L", "2L_L", "3L_L", "1L_R", "2L_R"],
+    "E":["LS", "RS", "T5"],
+    "d":[
+      {
+        "startState":"M_START",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "1R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "1L_L"
+        }]
+      },
+      {
+        "startState":"1R_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "2R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "M_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"2R_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "3R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "1R_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"3R_R",
+        "deltaFunction":[
+        {
+          "letter": "LS",
+          "endState": "2R_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"1R_L",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "2R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "M_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"2R_L",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "3R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "1R_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"M_L",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "1R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "1L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"1L_L",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "M_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "2L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"2L_L",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "1L_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "3L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"3L_L",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "2L_R"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"1L_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "M_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "2L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"2L_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "1L_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "3L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      },
+      {
+        "startState":"M_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "1R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "1L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "M_START"
+        }]
+      }
+    ],
+    "q0": "M_START",
+    "F":["M_START"]
+}

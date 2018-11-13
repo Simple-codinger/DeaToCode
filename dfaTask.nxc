@@ -1,0 +1,165 @@
+//DO NOT LOOK BEHIND THE CURTAIN!!!
+//IT IS ABSOLUTELY PERFECT! 
+
+#define M_START 0
+#define M_L 1
+#define M_R 2
+#define 1R_R 3
+#define 2R_R 4
+#define 3R_R 5
+#define 1R_L 6
+#define 2R_L 7
+#define 1L_L 8
+#define 2L_L 9
+#define 3L_L 10
+#define 1L_R 11
+#define 2L_R 12
+
+
+task dfa(){
+   int state = M_START;
+   while(1){
+      switch(state){
+         case M_START:
+            if(eventIsPresent(RS)){
+               state = 1R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 1L_L;
+            }
+         break;
+         case 1R_R:
+            if(eventIsPresent(RS)){
+               state = 2R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = M_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 2R_R:
+            if(eventIsPresent(RS)){
+               state = 3R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 1R_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 3R_R:
+            if(eventIsPresent(RS)){
+               state = 3R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 2R_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 1R_L:
+            if(eventIsPresent(RS)){
+               state = 2R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = M_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 2R_L:
+            if(eventIsPresent(RS)){
+               state = 3R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 1R_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case M_L:
+            if(eventIsPresent(RS)){
+               state = 1R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 1L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 1L_L:
+            if(eventIsPresent(RS)){
+               state = M_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 2L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 2L_L:
+            if(eventIsPresent(RS)){
+               state = 1L_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 3L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 3L_L:
+            if(eventIsPresent(RS)){
+               state = 2L_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 3L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 1L_R:
+            if(eventIsPresent(RS)){
+               state = M_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 2L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case 2L_R:
+            if(eventIsPresent(RS)){
+               state = 1L_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 3L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+         case M_R:
+            if(eventIsPresent(RS)){
+               state = 1R_R;
+            }
+            if(eventIsPresent(LS)){
+               state = 1L_L;
+            }
+            if(eventIsPresent(T5)){
+               state = M_START;
+            }
+         break;
+}
+}
+}
