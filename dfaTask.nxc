@@ -1,163 +1,157 @@
 //DO NOT LOOK BEHIND THE CURTAIN!!!
-//IT IS ABSOLUTELY PERFECT! 
+//IT IS ABSOLUTELY PERFECT!
 
-#define M_START 0
-#define M_L 1
-#define M_R 2
-#define 1R_R 3
-#define 2R_R 4
-#define 3R_R 5
-#define 1R_L 6
-#define 2R_L 7
-#define 1L_L 8
-#define 2L_L 9
-#define 3L_L 10
-#define 1L_R 11
-#define 2L_R 12
+#define QM_START 0
+#define QM_L 1
+#define QM_R 2
+#define Q1R_R 3
+#define Q2R_R 4
+#define Q3R_R 5
+#define Q1R_L 6
+#define Q2R_L 7
+#define Q1L_L 8
+#define Q2L_L 9
+#define Q3L_L 10
+#define Q1L_R 11
+#define Q2L_R 12
 
 
 task dfa(){
-   int state = M_START;
+   int state = QM_START;
    while(1){
       switch(state){
-         case M_START:
+         case QM_START:
             if(eventIsPresent(RS)){
-               state = 1R_R;
+               state = Q1R_R;
             }
             if(eventIsPresent(LS)){
-               state = 1L_L;
+               state = Q1L_L;
             }
          break;
-         case 1R_R:
+         case Q1R_R:
             if(eventIsPresent(RS)){
-               state = 2R_R;
+               state = Q2R_R;
             }
             if(eventIsPresent(LS)){
-               state = M_L;
+               state = QM_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 2R_R:
+         case Q2R_R:
             if(eventIsPresent(RS)){
-               state = 3R_R;
+               state = Q3R_R;
             }
             if(eventIsPresent(LS)){
-               state = 1R_L;
+               state = Q1R_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 3R_R:
-            if(eventIsPresent(RS)){
-               state = 3R_R;
-            }
+         case Q3R_R:
             if(eventIsPresent(LS)){
-               state = 2R_L;
+               state = Q2R_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 1R_L:
+         case Q1R_L:
             if(eventIsPresent(RS)){
-               state = 2R_R;
+               state = Q2R_R;
             }
             if(eventIsPresent(LS)){
-               state = M_L;
+               state = QM_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 2R_L:
+         case Q2R_L:
             if(eventIsPresent(RS)){
-               state = 3R_R;
+               state = Q3R_R;
             }
             if(eventIsPresent(LS)){
-               state = 1R_L;
+               state = Q1R_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case M_L:
+         case QM_L:
             if(eventIsPresent(RS)){
-               state = 1R_R;
+               state = Q1R_R;
             }
             if(eventIsPresent(LS)){
-               state = 1L_L;
+               state = Q1L_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 1L_L:
+         case Q1L_L:
             if(eventIsPresent(RS)){
-               state = M_R;
+               state = QM_R;
             }
             if(eventIsPresent(LS)){
-               state = 2L_L;
+               state = Q2L_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 2L_L:
+         case Q2L_L:
             if(eventIsPresent(RS)){
-               state = 1L_R;
+               state = Q1L_R;
             }
             if(eventIsPresent(LS)){
-               state = 3L_L;
+               state = Q3L_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 3L_L:
+         case Q3L_L:
             if(eventIsPresent(RS)){
-               state = 2L_R;
-            }
-            if(eventIsPresent(LS)){
-               state = 3L_L;
+               state = Q2L_R;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 1L_R:
+         case Q1L_R:
             if(eventIsPresent(RS)){
-               state = M_R;
+               state = QM_R;
             }
             if(eventIsPresent(LS)){
-               state = 2L_L;
+               state = Q2L_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case 2L_R:
+         case Q2L_R:
             if(eventIsPresent(RS)){
-               state = 1L_R;
+               state = Q1L_R;
             }
             if(eventIsPresent(LS)){
-               state = 3L_L;
+               state = Q3L_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
-         case M_R:
+         case QM_R:
             if(eventIsPresent(RS)){
-               state = 1R_R;
+               state = Q1R_R;
             }
             if(eventIsPresent(LS)){
-               state = 1L_L;
+               state = Q1L_L;
             }
             if(eventIsPresent(T5)){
-               state = M_START;
+               state = QM_START;
             }
          break;
 }

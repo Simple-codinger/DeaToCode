@@ -1,204 +1,204 @@
 {
-    "Q":["M_START", "M_L", "M_R", "1R_R", "2R_R", "3R_R", "1R_L", "2R_L", "1L_L", "2L_L", "3L_L", "1L_R", "2L_R"],
+    "Q":["QM_START", "QM_L", "QM_R", "Q1R_R", "Q2R_R", "Q3R_R", "Q1R_L", "Q2R_L", "Q1L_L", "Q2L_L", "Q3L_L", "Q1L_R", "Q2L_R"],
     "E":["LS", "RS", "T5"],
     "d":[
       {
-        "startState":"M_START",
+        "startState":"QM_START",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "1R_R"
+          "endState": "Q1R_R"
         },
         {
           "letter": "LS",
-          "endState": "1L_L"
+          "endState": "Q1L_L"
         }]
       },
       {
-        "startState":"1R_R",
+        "startState":"Q1R_R",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "2R_R"
+          "endState": "Q2R_R"
         },
         {
           "letter": "LS",
-          "endState": "M_L"
+          "endState": "QM_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"2R_R",
+        "startState":"Q2R_R",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "3R_R"
+          "endState": "Q3R_R"
         },
         {
           "letter": "LS",
-          "endState": "1R_L"
+          "endState": "Q1R_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"3R_R",
+        "startState":"Q3R_R",
         "deltaFunction":[
         {
           "letter": "LS",
-          "endState": "2R_L"
+          "endState": "Q2R_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"1R_L",
-        "deltaFunction":[
-        {
-          "letter": "RS",
-          "endState": "2R_R"
-        },
-        {
-          "letter": "LS",
-          "endState": "M_L"
-        },
-        {
-          "letter": "T5",
-          "endState": "M_START"
-        }]
-      },
-      {
-        "startState":"2R_L",
+        "startState":"Q1R_L",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "3R_R"
+          "endState": "Q2R_R"
         },
         {
           "letter": "LS",
-          "endState": "1R_L"
+          "endState": "QM_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"M_L",
+        "startState":"Q2R_L",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "1R_R"
+          "endState": "Q3R_R"
         },
         {
           "letter": "LS",
-          "endState": "1L_L"
+          "endState": "Q1R_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"1L_L",
+        "startState":"QM_L",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "M_R"
+          "endState": "Q1R_R"
         },
         {
           "letter": "LS",
-          "endState": "2L_L"
+          "endState": "Q1L_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"2L_L",
+        "startState":"Q1L_L",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "1L_R"
+          "endState": "QM_R"
         },
         {
           "letter": "LS",
-          "endState": "3L_L"
+          "endState": "Q2L_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"3L_L",
+        "startState":"Q2L_L",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "2L_R"
-        },
-        {
-          "letter": "T5",
-          "endState": "M_START"
-        }]
-      },
-      {
-        "startState":"1L_R",
-        "deltaFunction":[
-        {
-          "letter": "RS",
-          "endState": "M_R"
+          "endState": "Q1L_R"
         },
         {
           "letter": "LS",
-          "endState": "2L_L"
+          "endState": "Q3L_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"2L_R",
+        "startState":"Q3L_L",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "1L_R"
-        },
-        {
-          "letter": "LS",
-          "endState": "3L_L"
+          "endState": "Q2L_R"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
         }]
       },
       {
-        "startState":"M_R",
+        "startState":"Q1L_R",
         "deltaFunction":[
         {
           "letter": "RS",
-          "endState": "1R_R"
+          "endState": "QM_R"
         },
         {
           "letter": "LS",
-          "endState": "1L_L"
+          "endState": "Q2L_L"
         },
         {
           "letter": "T5",
-          "endState": "M_START"
+          "endState": "QM_START"
+        }]
+      },
+      {
+        "startState":"Q2L_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "Q1L_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "Q3L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "QM_START"
+        }]
+      },
+      {
+        "startState":"QM_R",
+        "deltaFunction":[
+        {
+          "letter": "RS",
+          "endState": "Q1R_R"
+        },
+        {
+          "letter": "LS",
+          "endState": "Q1L_L"
+        },
+        {
+          "letter": "T5",
+          "endState": "QM_START"
         }]
       }
     ],
-    "q0": "M_START",
-    "F":["M_START"]
+    "q0": "QM_START",
+    "F":["QM_START"]
 }
