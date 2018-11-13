@@ -21,29 +21,33 @@ void DfaToNxc::generate(string path, Dfa dfa){
   }
 
   //task begin
-  nxc.append("\n\ntask dfa(){\n\n");
+  nxc.append("\n\ntask dfa(){\n");
 
   //startState
   stringstream startStateString;
-  startStateString << "int state = " << dfa.getStartState().getName() << ";\n";
+  startStateString << "   int state = " << dfa.getStartState().getName() << ";\n";
   nxc.append(startStateString.str());
 
   //while(true) begin
-  nxc.append("while(1){\n");
+  //3 spaces
+  nxc.append("   while(1){\n");
 
   //switch begin
-  nxc.append("switch(state){\n");
+  //6 spaces
+  nxc.append("      switch(state){\n");
 
   for(DeltaFunction deltaFunction : dfa.getDeltaFunctions()){
     stringstream caseStream;
-    caseStream << "case " << deltaFunction.getState().getName() << ":" << endl;
+    //9 spaces
+    caseStream << "         case " << deltaFunction.getState().getName() << ":" << endl;
     nxc.append(caseStream.str());
     for(Delta delta : deltaFunction.getDeltas()){
       stringstream deltaStream;
-      deltaStream << "if(eventIsPresent(" << delta.alphabetLetter << ")){\nstate = " << delta.endState.getName() << ";\n}" << endl;
+      //12 spaces  - 15 spaces
+      deltaStream << "            if(eventIsPresent(" << delta.alphabetLetter << ")){\n               state = " << delta.endState.getName() << ";\n            }" << endl;
       nxc.append(deltaStream.str());
     }
-    nxc.append("break;\n");
+    nxc.append("         break;\n");
   }
 
   //switch end
