@@ -13,6 +13,6 @@
 int main(){
     //TODO add mappers object to constructor, it should indicate to which code it should transfer
     DfaToNxc codeGenerator;
-    Application app("robotic.json", "dfaTask.nxc", codeGenerator);
+    Application app("robotic.json", "dfaTask.nxc", &codeGenerator);
     app.run();
 }

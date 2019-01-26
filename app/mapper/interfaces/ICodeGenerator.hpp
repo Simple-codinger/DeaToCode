@@ -17,6 +17,5 @@
 class ICodeGenerator{
   public:
     virtual void generate(string path, Dfa dfa) = 0;
-    virtual ~ICodeGenerator(){}
 };
 #endif

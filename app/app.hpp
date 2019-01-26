@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include "mapper/JsonToDfa.hpp"
+#include "mapper/interfaces/ICodeGenerator.hpp"
 #include "mapper/DfaToNxc.hpp"
 
 using namespace std;
@@ -21,11 +22,11 @@ class Application{
 private:
     string _pathToJson;
     string _pathToCode;
-    DfaToNxc _codeGenerator;
+    ICodeGenerator* _codeGenerator;
     void printWelcomeText();
 
 public:
-    Application(string jsonPath, string codePath, DfaToNxc codeGenerator);
+    Application(string jsonPath, string codePath, ICodeGenerator* codeGenerator);
     void run();
 };
 #endif /* app_hpp */

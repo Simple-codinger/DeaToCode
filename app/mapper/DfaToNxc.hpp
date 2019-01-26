@@ -13,11 +13,11 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-//#include "interfaces/ICodeGenerator.hpp"
+#include "interfaces/ICodeGenerator.hpp"
 #include "../models/Dfa.hpp"
 
-class DfaToNxc {
+class DfaToNxc : public ICodeGenerator{
   public:
-     void generate(string path, Dfa dfa);
+     void generate(string path, Dfa dfa) override;
 };
 #endif /* DfaToCode_hpp */
